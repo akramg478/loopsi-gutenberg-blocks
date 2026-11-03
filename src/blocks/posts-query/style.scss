@@ -1,0 +1,902 @@
+/* =========================================
+
+   LOOPSI GRID WRAPPER
+
+========================================= */
+
+
+
+.loopsi-post-grid {
+
+    display: grid;
+
+    gap: 24px;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/* Column variants (grid layout only) */
+
+.loopsi-post-grid.loopsi-columns-1 {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+
+.loopsi-post-grid.loopsi-columns-2 {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+
+
+.loopsi-post-grid.loopsi-columns-3 {
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+}
+
+
+
+.loopsi-post-grid.loopsi-columns-4 {
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+}
+
+
+
+.loopsi-post-grid.loopsi-columns-5 {
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+}
+
+
+
+.loopsi-post-grid.loopsi-columns-6 {
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+}
+
+
+
+/* Layout variants */
+
+.loopsi-layout-list {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-post-card {
+
+    flex-direction: row;
+
+    align-items: stretch;
+
+    min-height: 190px;
+
+    overflow: hidden;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-thumb {
+
+    width: 280px;
+
+    min-width: 280px;
+
+    max-width: 280px;
+
+    height: auto;
+
+    min-height: 190px;
+
+    flex-shrink: 0;
+
+    aspect-ratio: auto;
+
+    align-self: stretch;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+.loopsi-layout-list .loopsi-thumb a {
+
+    display: block;
+
+    height: 100%;
+
+    min-height: 190px;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-thumb img,
+.loopsi-layout-list .loopsi-thumb-placeholder-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 190px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-thumb--placeholder img,
+.loopsi-layout-list .loopsi-thumb-placeholder-img {
+
+    object-fit: cover;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    align-self: stretch;
+
+    box-sizing: border-box;
+
+    min-height: 190px;
+
+    min-width: 0;
+
+    padding-top: 32px;
+
+    padding-bottom: 32px;
+
+    padding-left: 36px;
+
+    padding-right: 36px;
+
+    gap: 12px;
+
+}
+
+
+
+.loopsi-layout-list .loopsi-content > * {
+
+    margin: 0;
+
+    width: 100%;
+
+}
+
+
+
+/* =========================================
+
+   POST CARD
+
+========================================= */
+
+
+
+.loopsi-post-card {
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    height: 100%;
+
+}
+
+
+
+.loopsi-post-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+}
+
+
+
+/* =========================================
+
+   THUMBNAIL
+
+========================================= */
+
+
+
+.loopsi-thumb {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+
+}
+
+
+
+.loopsi-thumb img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+
+}
+
+
+
+.loopsi-thumb--placeholder {
+
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+
+}
+
+
+
+.loopsi-thumb-placeholder-img {
+
+    object-fit: cover;
+
+}
+
+
+
+.loopsi-post-card:hover .loopsi-thumb img {
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* =========================================
+
+   CONTENT AREA
+
+========================================= */
+
+
+
+.loopsi-content {
+
+    padding: 16px 16px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+
+/* Title */
+
+.loopsi-title {
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    margin: 0;
+
+    font-weight: 600;
+
+}
+
+
+
+.loopsi-title a {
+
+    text-decoration: none;
+
+    color: #111;
+
+    transition: color 0.2s ease;
+
+}
+
+
+
+.loopsi-title a:hover {
+
+    color: #2271b1;
+
+}
+
+
+
+/* Author */
+
+.loopsi-author {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: #666;
+
+}
+
+
+
+/* Excerpt */
+
+.loopsi-excerpt {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #555;
+
+}
+
+
+
+/* Read more */
+
+.loopsi-read-more-wrap {
+
+    margin: 0;
+
+}
+
+
+
+.loopsi-read-more {
+
+    display: inline-block;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    color: #2271b1;
+
+    transition: color 0.2s ease;
+
+}
+
+
+
+.loopsi-read-more:hover {
+
+    color: #135e96;
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================================
+
+   LOAD MORE BUTTON
+
+========================================= */
+
+
+
+.loopsi-pagination {
+
+    margin-top: 28px;
+
+    text-align: center;
+
+}
+
+
+
+.loopsi-load-more {
+
+    background: #2271b1;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+
+
+.loopsi-load-more:hover {
+
+    background: #135e96;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.loopsi-load-more:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+
+/* =========================================
+
+   INFINITE SCROLL SENTINEL
+
+========================================= */
+
+
+
+.loopsi-infinite-sentinel {
+
+    height: 1px;
+
+}
+
+
+
+.loopsi-pagination-infiniteScroll {
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-height: 56px;
+
+}
+
+
+
+.loopsi-loading-status {
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 16px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+
+.loopsi-loading-status.is-visible {
+
+    display: inline-flex;
+
+}
+
+
+
+.loopsi-loading-spinner {
+
+    width: 22px;
+
+    height: 22px;
+
+    border: 2px solid #e5e7eb;
+
+    border-top-color: #2271b1;
+
+    border-radius: 50%;
+
+    animation: loopsi-spin 0.8s linear infinite;
+
+    flex-shrink: 0;
+
+}
+
+
+
+@keyframes loopsi-spin {
+
+    to {
+
+        transform: rotate( 360deg );
+
+    }
+
+}
+
+
+
+/* =========================================
+
+   PAGINATION
+
+========================================= */
+
+.loopsi-pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 32px;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Page links */
+
+.loopsi-pagination .loopsi-page {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    min-width: 42px;
+
+    height: 42px;
+
+
+
+    padding: 0 12px;
+
+
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+
+
+    background: #fff;
+
+    color: #374151;
+
+
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+
+
+    transition: all 0.2s ease;
+
+}
+
+
+
+.loopsi-pagination .loopsi-page:disabled {
+
+    cursor: default;
+
+    opacity: 1;
+
+}
+
+
+
+/* Hover state */
+
+.loopsi-pagination .loopsi-page:hover:not(:disabled) {
+
+    background: #f3f4f6;
+
+    border-color: #d1d5db;
+
+    transform: translateY(-1px);
+
+}
+
+
+
+/* Active page */
+
+.loopsi-pagination .loopsi-page.is-active {
+
+    background: #111827;
+
+    color: #ffffff;
+
+    border-color: #111827;
+
+
+
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.25);
+
+}
+
+
+
+/* Focus accessibility */
+
+.loopsi-pagination .loopsi-page:focus {
+
+    outline: 2px solid #3b82f6;
+
+    outline-offset: 2px;
+
+}
+
+
+
+/* Mobile tuning */
+
+@media (max-width: 480px) {
+
+    .loopsi-pagination {
+
+        gap: 6px;
+
+    }
+
+
+
+    .loopsi-pagination .loopsi-page {
+
+        min-width: 38px;
+
+        height: 38px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+
+/* =========================================
+
+   EMPTY STATE
+
+========================================= */
+
+
+
+.loopsi-empty {
+
+	margin: 0;
+
+	padding: 40px 16px;
+
+	text-align: center;
+
+	color: #555;
+
+	font-size: 14px;
+
+	line-height: 1.6;
+
+}
+
+
+
+/* =========================================
+
+   RESPONSIVE
+
+========================================= */
+
+
+
+@media (max-width: 1024px) {
+
+    .loopsi-post-grid.loopsi-columns-5,
+
+    .loopsi-post-grid.loopsi-columns-6 {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+
+
+    .loopsi-post-grid.loopsi-columns-4 {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .loopsi-post-grid.loopsi-columns-2,
+
+    .loopsi-post-grid.loopsi-columns-3,
+
+    .loopsi-post-grid.loopsi-columns-4,
+
+    .loopsi-post-grid.loopsi-columns-5,
+
+    .loopsi-post-grid.loopsi-columns-6 {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .loopsi-post-grid {
+
+        gap: 16px;
+
+    }
+
+
+
+    .loopsi-layout-list .loopsi-post-card {
+
+        flex-direction: column;
+
+        min-height: 0;
+
+    }
+
+
+
+    .loopsi-layout-list .loopsi-thumb {
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: none;
+
+        min-height: 0;
+
+        aspect-ratio: 16 / 10;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    }
+
+
+
+    .loopsi-layout-list .loopsi-thumb a {
+
+        min-height: 0;
+
+    }
+
+
+
+    .loopsi-layout-list .loopsi-thumb img,
+    .loopsi-layout-list .loopsi-thumb-placeholder-img {
+
+        min-height: 0;
+
+    }
+
+
+
+    .loopsi-layout-list .loopsi-content {
+
+        min-height: 0;
+
+        padding-top: 24px;
+
+        padding-bottom: 24px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+        justify-content: center;
+
+    }
+
+
+
+    .loopsi-content {
+
+        padding: 14px;
+
+    }
+
+
+
+    .loopsi-title {
+
+        font-size: 15px;
+
+    }
+
+}
+
+

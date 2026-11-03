@@ -1,0 +1,40 @@
+@import './style.scss';
+
+.loopsi-block-editor {
+	width: 100%;
+}
+
+.loopsi-block-preview-loading {
+	display: flex;
+	justify-content: center;
+	padding: 40px 0;
+}
+
+.loopsi-panel-note {
+	margin: 0 0 12px;
+	color: #757575;
+}
+
+.loopsi-meta-rule {
+	margin-top: 12px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.loopsi-taxonomy-group {
+	margin: 0 0 16px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.loopsi-taxonomy-group legend {
+	font-weight: 600;
+	padding: 0 4px;
+	margin-bottom: 8px;
+}
+
+.loopsi-taxonomy-group .components-base-control {
+	margin-bottom: 4px;
+}

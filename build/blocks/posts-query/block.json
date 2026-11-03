@@ -1,0 +1,118 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "loopsi/posts-query",
+  "title": "Loopsi Posts",
+  "category": "widgets",
+  "icon": "grid-view",
+  "description": "Display WordPress posts using customizable queries, layouts, and filters.",
+  "textdomain": "loopsi-blocks",
+  "keywords": [
+    "posts",
+    "query",
+    "loop",
+    "grid",
+    "dynamic"
+  ],
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:../../index.js",
+  "editorStyle": "file:../../index.css",
+  "style": "file:../../style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "postsPerPage": {
+      "type": "number",
+      "default": 6
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "order": {
+      "type": "string",
+      "default": "DESC"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "author": {
+      "type": "number",
+      "default": 0
+    },
+    "include": {
+      "type": "array",
+      "default": []
+    },
+    "exclude": {
+      "type": "array",
+      "default": []
+    },
+    "taxQuery": {
+      "type": "object",
+      "default": {}
+    },
+    "metaQuery": {
+      "type": "array",
+      "default": []
+    },
+    "search": {
+      "type": "string",
+      "default": ""
+    },
+    "stickyPosts": {
+      "type": "string",
+      "default": "inherit"
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "paginationType": {
+      "type": "string",
+      "default": "none"
+    },
+    "cacheResults": {
+      "type": "boolean",
+      "default": false
+    },
+    "cacheTTL": {
+      "type": "number",
+      "default": 300
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showThumbnail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAuthor": {
+      "type": "boolean",
+      "default": false
+    },
+    "showReadMore": {
+      "type": "boolean",
+      "default": true
+    },
+    "readMoreText": {
+      "type": "string",
+      "default": "Read more"
+    },
+    "showFeaturedImage": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="loopsi-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3f4f6"/>
+      <stop offset="100%" stop-color="#e5e7eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#loopsi-bg)"/>
+  <g fill="none" stroke="#9ca3af" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="250" y="130" width="300" height="220" rx="18"/>
+    <circle cx="315" cy="195" r="28" fill="#d1d5db" stroke="none"/>
+    <path d="M270 320 L360 245 L430 295 L530 205 L530 350 L270 350 Z" fill="#d1d5db" stroke="none"/>
+  </g>
+</svg>

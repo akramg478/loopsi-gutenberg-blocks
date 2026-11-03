@@ -1,0 +1,26 @@
+{
+    "name": "loopsi-blocks",
+    "version": "1.0.0",
+    "files": [
+        "loopsi-blocks.php",
+        "readme.txt",
+        "uninstall.php",
+        "index.php",
+        "package.json",
+        "composer.json",
+        "languages",
+        "src",
+        "build",
+        "includes",
+        "assets",
+        "vendor"
+    ],
+    "scripts": {
+        "start": "wp-scripts start",
+        "build": "wp-scripts build",
+        "plugin-zip": "npm run build && wp-scripts plugin-zip"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.0.0"
+    }
+}
