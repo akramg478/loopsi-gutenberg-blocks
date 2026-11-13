@@ -33,7 +33,7 @@ Loopsi - Blocks provides a dynamic posts query block for the block editor. Build
 
 **For developers (working from source):**
 
-1. Clone or copy the plugin into `/wp-content/plugins/loopsi-blocks`.
+1. In `wp-content/plugins`, clone the repository as `loopsi-blocks`: `git clone https://github.com/akramg478/loopsi-gutenberg-blocks.git loopsi-blocks`.
 2. Run `composer install --no-dev` in the plugin directory.
 3. Run `npm install && npm run build` to compile block assets.
 4. Activate the plugin in WordPress.
